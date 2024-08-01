@@ -1,0 +1,52 @@
+{
+  "printing": [
+    {
+      "name": "Copies",
+      "price": "1.99",
+      "type": "Quick Print",
+      "description": "Quick, quality copying and document production",
+      "turnaround": "1 Day",
+      "ordered": 0
+    },
+    {
+      "name": "Banner",
+      "price": "69.99",
+      "type": "Signs",
+      "description": "Standard, heavy-duty, mesh vinyl",
+      "turnaround": "4 Days",
+      "ordered": 0
+    },
+    {
+      "name": "Postcard",
+      "price": "2.99",
+      "type": "Marketing",
+      "description": "High-quality, custom postcards",
+      "turnaround": "1 Day",
+      "ordered": 0
+    },
+    {
+      "name": "Yard Sign",
+      "price": "39.99",
+      "type": "Signs",
+      "description": "Made from durable corrugated plastic",
+      "turnaround": "5 Days",
+      "ordered": 0
+    },
+    {
+      "name": "Tri Fold",
+      "price": "3.99",
+      "type": "High-quality full-color printing. Folds keep information organized",
+      "description": "Create info-packed handouts with custom brochure printing",
+      "turnaround": "3 Days",
+      "ordered": 0
+    },
+    {
+      "name": "Business Cards",
+      "price": ".99",
+      "type": "Marketing",
+      "description": "Thick, premium quality cardstock",
+      "turnaround": "2 Days",
+      "ordered": 0
+    }
+  ]
+}
