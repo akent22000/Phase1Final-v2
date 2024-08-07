@@ -4,7 +4,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #BFA490;
+  background-color: #ebe9e5;
   font-family: "houschka-rounded", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -30,9 +30,36 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
 }
 
 .fa {
   color: black;
+  font-size: 30px;
+}
+
+.image {
+  width: 300px;
+  height: inherit;
+  position: relative;
+
+
+}
+
+.name {
+  color: #126CB5;
+  font-family: "houschka-rounded", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.text {
+  color: #fff;
+  font-family: "houschka-rounded", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 5px;
+  position: absolute;
+  z-index: 100;
+  background-color: #ef870a;
 }

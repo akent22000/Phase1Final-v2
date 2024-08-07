@@ -1,12 +1,12 @@
 {
   "printing": [
     {
-      "name": "Foil Business Cards",
-      "image": "https://staticecp.uprinting.com/121/660x660/Foil_Business_Cards_Marketing_Material_A.jpg",
-      "price": "$1.00",
-      "type": "Quick Print",
-      "description": "Quick, quality copying and document production",
-      "turnaround": "1 Day"
+      "name": "Metallic Business Cards",
+      "image": "https://staticecp.uprinting.com/219/660x660/Metallic_Print_Business_Cards_Marketing_Material_A.jpg",
+      "price": "$2.00",
+      "type": "Marketing",
+      "description": "Thick, premium quality cardstock",
+      "turnaround": "2 Days"
     },
     {
       "name": "Plastic Business Cards",
@@ -41,12 +41,12 @@
       "turnaround": "3 Days"
     },
     {
-      "name": "Metallic Business Cards",
-      "image": "https://staticecp.uprinting.com/219/660x660/Metallic_Print_Business_Cards_Marketing_Material_A.jpg",
-      "price": "$2.00",
-      "type": "Marketing",
-      "description": "Thick, premium quality cardstock",
-      "turnaround": "2 Days"
+      "name": "Foil Business Cards",
+      "image": "https://staticecp.uprinting.com/121/660x660/Foil_Business_Cards_Marketing_Material_A.jpg",
+      "price": "$1.00",
+      "type": "Quick Print",
+      "description": "Quick, quality copying and document production",
+      "turnaround": "1 Day"
     }
   ]
 }
