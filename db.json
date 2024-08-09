@@ -3,7 +3,7 @@
     {
       "name": "Metallic Business Cards",
       "image": "https://staticecp.uprinting.com/219/660x660/Metallic_Print_Business_Cards_Marketing_Material_A.jpg",
-      "price": "$2.00",
+      "price": 50,
       "type": "Marketing",
       "description": "Thick, premium quality cardstock",
       "turnaround": "2 Days"
@@ -11,7 +11,7 @@
     {
       "name": "Plastic Business Cards",
       "image": "https://staticecp.uprinting.com/968/660x660/Plastic_Business_Cards_Marketing_Materials_Aa.jpg",
-      "price": "$70.00",
+      "price": 70,
       "type": "Signs",
       "description": "Standard, heavy-duty, mesh vinyl",
       "turnaround": "4 Days"
@@ -19,7 +19,7 @@
     {
       "name": "Printed Edge Business Cards",
       "image": "https://staticecp.uprinting.com/905/660x660/Painted_Edge_Business_Cards_Marketing_Materials_A.jpg",
-      "price": "$3.00",
+      "price": 40,
       "type": "Marketing",
       "description": "High-quality, custom postcards",
       "turnaround": "1 Day"
@@ -27,7 +27,7 @@
     {
       "name": "Silk Business Cards",
       "image": "https://staticecp.uprinting.com/226/660x660/Silk_Business_Cards_Marketing_Material_A.jpg",
-      "price": "$40.00",
+      "price": 60,
       "type": "Signs",
       "description": "Made from durable corrugated plastic",
       "turnaround": "5 Days"
@@ -35,7 +35,7 @@
     {
       "name": "Velvet Business Cards",
       "image": "https://staticecp.uprinting.com/225/660x660/Velvet_Business_Cards_Marketing_Material_A.jpg",
-      "price": "$4.00",
+      "price": 80,
       "type": "Marketing",
       "description": "Create info-packed handouts with custom brochure printing",
       "turnaround": "3 Days"
@@ -43,7 +43,7 @@
     {
       "name": "Foil Business Cards",
       "image": "https://staticecp.uprinting.com/121/660x660/Foil_Business_Cards_Marketing_Material_A.jpg",
-      "price": "$1.00",
+      "price": 30,
       "type": "Quick Print",
       "description": "Quick, quality copying and document production",
       "turnaround": "1 Day"
