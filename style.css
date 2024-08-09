@@ -1,16 +1,14 @@
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #ebe9e5;
   font-family: "houschka-rounded", sans-serif;
   font-weight: 500;
   font-style: normal;
+
+
 }
 
-.card {
+.col-md-auto {
   background-color: white;
   padding: 20px;
   border-radius: 15px;
@@ -19,17 +17,11 @@ body {
 }
 
 .display {
-  display: flex;
+  /* display: flex;
   margin: auto;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
 
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .fa {
@@ -57,9 +49,14 @@ body {
   color: #fff;
   font-family: "houschka-rounded", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   padding: 5px;
   position: absolute;
   z-index: 100;
   background-color: #ef870a;
+}
+
+.cartText {
+  color: #ebe9e5;
+  font-size: 18px;
 }
