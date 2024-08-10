@@ -1,4 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+    first(fetchPrint)
+});
 
+function first(title) {
+    document.getElementById("title").textContent = 'Print Shop'
+    title();
+}
 
 
 //set shopping cart count varialbe
@@ -6,16 +13,20 @@ let quantity = 0;
 //set sort click event varialbe
 clicked = 0
 
-//fetch json
+//fetch json db
 function fetchPrint() {
     fetch('http://localhost:3000/printing')
         .then((response) => response.json())
         .then((print) => {
 
+            //if/else condition to sort if sort button is clicked, default no click is sort by name
             if (clicked === 1) {
+                //reset html display
                 document.getElementById("display").innerHTML = ''
+                //sort array by price
                 print.sort((a, b) => a.price - b.price);
             } else if (clicked === 0) {
+                //sort array by name
                 print.sort((a, b) => {
                     const nameA = a.name.toUpperCase();
                     const nameB = b.name.toUpperCase();
@@ -28,19 +39,20 @@ function fetchPrint() {
                     return 0;
                 });
             }
+            //render to page 
             print.forEach(print => {
                 renderPrint(print)
             })
         })
 }
-fetchPrint()
 
 
+
+//top of page element creations
 sortBTN = document.createElement('button');
 sortBtnText = document.createElement('h3');
 const divHeader = document.getElementById('header');
 const header = document.createElement('i');
-countText = document.createElement('h3');
 let i = document.createElement("i");
 
 i.classList.add("fa", "fa-shopping-cart")
@@ -48,22 +60,25 @@ sortBTN.setAttribute("class", "btn btn-secondary");
 divHeader.setAttribute("class", "col-md-auto");
 sortBtnText.setAttribute("class", "cartText");
 
-countText.textContent = quantity;
+i.textContent = quantity
 sortBtnText.textContent = "Sort by price"
 
-header.appendChild(countText)
 header.appendChild(i)
 divHeader.appendChild(header)
-divHeader.appendChild(sortBTN)
 sortBTN.appendChild(sortBtnText)
+divHeader.appendChild(sortBTN)
 
 
+//sort by price button/event
 sortBTN.addEventListener('click', (e) => {
     clicked = 1
+    //re-render data to display updated sort order
     fetchPrint()
 });
 
+//render data elements to page via forEach in fetch function
 function renderPrint(print) {
+    //define/create page elements
     const cardsContainer = document.getElementById('display');
     const myDetails = document.createElement('details');
     const description = document.createElement('summary');
@@ -76,6 +91,7 @@ function renderPrint(print) {
     cartBTN = document.createElement('button');
     const cartBtnText = document.createElement('h3');
 
+    //assign css elements
     div.setAttribute("class", "col-md-auto");
     div.setAttribute("id", "myDetails");
     cardsContainer.setAttribute("class", "row");
@@ -103,9 +119,8 @@ function renderPrint(print) {
     text.classList.add('text');
     text.textContent = 'Hover to see discount!';
 
+    //organize page elements
     div.appendChild(text)
-
-
     div.appendChild(image)
     div.appendChild(name)
     myDetails.appendChild(description)
@@ -118,26 +133,36 @@ function renderPrint(print) {
     cartBTN.appendChild(cartBtnText)
     cardsContainer.appendChild(div)
 
+    //cart button click event
     cartBTN.addEventListener('click', (e) => {
+        //increments "Add to Cart" clicks
         quantity++;
-        countText.textContent = quantity;
+        //updates cart text to show current click amount
+        i.textContent = quantity;
 
     });
 
+    //image hover over event
     image.addEventListener('mouseover', () => {
+        //if/else condition based on price
         if (print.price <= 50) {
+            //updates discount text to show 10% discount if price is $50 or less
             text.textContent = '10% off';
         } else if (print.price >= 51) {
+            //updates discount text to show 30% discount if price is over $50
             text.textContent = '30% off';
 
         }
     });
 
+    //image hover out event
     image.addEventListener('mouseout', () => {
+        //updates discount text to show hint/default text
         text.textContent = 'Hover to see discount!';
 
     });
 
+    //toggle event, opens to show product detail text
     document.getElementById("myDetails").addEventListener("toggle", (e) => {
 
     });

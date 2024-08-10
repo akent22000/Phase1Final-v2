@@ -4,37 +4,28 @@ body {
   font-family: "houschka-rounded", sans-serif;
   font-weight: 500;
   font-style: normal;
-
-
+  padding: 20px;
+  margin: 20px;
 }
+
 
 .col-md-auto {
   background-color: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin: 20px;
-
-}
-
-.display {
-  /* display: flex;
-  margin: auto;
-  flex-wrap: wrap;
-  justify-content: center; */
+  padding: 10px;
+  margin: 10px;
 
 }
 
 .fa {
   color: black;
   font-size: 30px;
+  padding: 20px;
 }
 
 .image {
   width: 300px;
   height: inherit;
   position: relative;
-
-
 }
 
 .name {
@@ -59,4 +50,9 @@ body {
 .cartText {
   color: #ebe9e5;
   font-size: 18px;
+}
+
+#title {
+  font-size: 40px;
+
 }
