@@ -15,19 +15,19 @@ clicked = 0
 
 //fetch json db
 function fetchPrint() {
-    fetch('http://localhost:3000/printing')
+    fetch('http://localhost:3000/cards')
         .then((response) => response.json())
-        .then((print) => {
+        .then((card) => {
 
             //if/else condition to sort if sort button is clicked, default no click is sort by name
             if (clicked === 1) {
                 //reset html display
                 document.getElementById("display").innerHTML = ''
                 //sort array by price
-                print.sort((a, b) => a.price - b.price);
+                card.sort((a, b) => a.price - b.price);
             } else if (clicked === 0) {
                 //sort array by name
-                print.sort((a, b) => {
+                card.sort((a, b) => {
                     const nameA = a.name.toUpperCase();
                     const nameB = b.name.toUpperCase();
                     if (nameA < nameB) {
@@ -40,8 +40,8 @@ function fetchPrint() {
                 });
             }
             //render to page 
-            print.forEach(print => {
-                renderPrint(print)
+            card.forEach(card => {
+                renderPrint(card)
             })
         })
 }
@@ -77,7 +77,7 @@ sortBTN.addEventListener('click', (e) => {
 });
 
 //render data elements to page via forEach in fetch function
-function renderPrint(print) {
+function renderPrint(card) {
     //define/create page elements
     const cardsContainer = document.getElementById('display');
     const myDetails = document.createElement('details');
@@ -100,17 +100,17 @@ function renderPrint(print) {
 
 
     description.textContent = 'Product Description'
-    details.textContent = `${print.description}`
-    name.textContent = `${print.name}`
-    type.textContent = `Category: ${print.type}`
-    price.textContent = `Price: ${print.price}`
-    turnaround.textContent = `Turn around time: ${print.turnaround}`
+    details.textContent = `${card.description}`
+    name.textContent = `${card.name}`
+    type.textContent = `Category: ${card.type}`
+    price.textContent = `Price: ${card.price}`
+    turnaround.textContent = `Turn around time: ${card.turnaround}`
 
     cartBtnText.textContent = 'Add to Cart';
     const image = document.createElement('img');
 
     image.classList = 'card-img'
-    image.src = print.image
+    image.src = card.image
     image.classList.add('image');
     name.classList.add('name');
 
@@ -145,10 +145,10 @@ function renderPrint(print) {
     //image hover over event
     image.addEventListener('mouseover', () => {
         //if/else condition based on price
-        if (print.price <= 50) {
+        if (card.price <= 50) {
             //updates discount text to show 10% discount if price is $50 or less
             text.textContent = '10% off';
-        } else if (print.price >= 51) {
+        } else if (card.price >= 51) {
             //updates discount text to show 30% discount if price is over $50
             text.textContent = '30% off';
 
