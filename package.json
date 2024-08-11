@@ -1,17 +1,20 @@
 {
-  "name": "phase1final-v2",
-  "version": "1.0.0",
-  "description": "## Intro",
-  "main": "script.js",
+  "name": "json-server-template",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon server.js",
+    "seed": "cp db/seeds.json db/db.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "json-server": "^1.0.0-beta.1",
-    "npm-watch": "^0.13.0"
-  }
+    "cors": "^2.8.5",
+    "json-server": "^0.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "author": "Ian Hollander",
+  "license": "ISC"
 }
